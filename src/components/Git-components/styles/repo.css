@@ -1,0 +1,87 @@
+.user-avatar-repos{
+    height: 80px;
+    width: 80px;
+
+    border-radius: 50%;
+}
+
+.repo-header{
+    background-color: gray;
+    margin: 50px 20px 20px 20px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+    border: 1px solid black;
+
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.336);
+}
+
+.back-arrow{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+
+    z-index: 10;
+}
+
+.stats-box{
+    border: 1px solid black;
+    border-radius: 10px;
+    
+
+    padding: 10px;
+    margin: 10px;
+}
+
+.links-box{
+    border: 1px solid black;
+    border-radius: 10px;
+
+
+    margin: 10px;
+    padding: 10px;
+}
+
+#container{
+    padding: 10px;
+    margin: 10px 20px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.507);
+
+    background-color: rgb(153, 153, 153);
+}
+
+.repo-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 10px 20%;
+
+}
+
+.p-stats{
+    display: flex;
+    align-items: center;
+
+    margin: 5px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.377);
+}
+
+.p-links{
+    display: flex;
+    align-items: center;
+
+    margin: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.377);
+}

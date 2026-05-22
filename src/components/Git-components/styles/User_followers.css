@@ -1,0 +1,16 @@
+.followers{
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding: 20px;
+    margin: 10px 20px;
+}
+
+.follower{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 20px auto;
+}

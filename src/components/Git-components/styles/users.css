@@ -1,0 +1,71 @@
+.name-header{
+    margin: 10px 10px 30px 10px;
+    text-align: center;
+    padding: 10px;
+
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.user-avatar{
+    display: flex;
+    justify-self: center;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.user-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 70px 40px;
+}
+
+.folowers-avatar{
+    width: 50px;
+    height: 50px;
+}
+
+.followers-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-radius: 10px;
+
+    margin: 10px 20px;
+    padding: 10px;
+
+    background-color: gray;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.profile-card{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto 20px;
+
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.377);
+}

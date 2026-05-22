@@ -1,0 +1,268 @@
+:root{
+    --primary: #494949;
+    --primary-buttons: #2563EB;
+    --income: green;
+    --expenses: red;
+    --text: black;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.finance-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    background-color: gray;
+}
+
+.spendings-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.spendings-title{
+    color: black;
+}
+
+.spendings{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+    padding: 10px;
+    color: black;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 70%;
+    height: 400px;
+    max-height: 400px;
+
+    margin: 20px auto 40px auto;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    box-shadow: 4px 4px 10px 5px gray;
+    overflow: scroll;
+}
+
+.add-menu{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    z-index: 10;
+
+    width: 100%;
+    transform: translate(-50%, 0);
+
+}
+
+.expense-input{
+    font-size: 20px;
+    margin: 5px;
+    padding: 20px 10px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    
+    height: 60px;
+    min-width: 90%;
+    background-color: #494949a1;
+}
+
+.expense-input::placeholder{
+    font-size: 25px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.438);
+}
+
+#add-expense:checked ~ .add-menu{
+    display: flex;
+}
+
+#add-expense:checked ~ #overlay{
+    display: block;
+} 
+
+#overlay{
+    display: none;
+
+    height: 100%;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-add{
+    width: 60%;
+    height: 50px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: x-large;
+
+    color: white;
+    background-color: black;
+}
+
+#expense{
+    font-weight: 600;
+
+    overflow: scroll;
+    max-width: 50px;
+    max-height: 46px;
+}
+
+#value{
+    font-weight: 600;
+}
+
+.trans-div{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tranzakcije-box{
+    display: flex;
+    flex-direction: column-reverse;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.expenses-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 30px;
+    margin: 5px auto 5px 0;
+
+    max-height: 46px;
+}
+
+.date-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.expense-value-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.x-btn{
+    border: none;
+    margin: 5px 10px 5px auto;
+    background-color: white;
+}
+
+.remove-box{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    z-index: 10;
+
+    transform: translate(-50%, -50%);
+}
+
+#remove-btn:checked ~ .remove-box{
+    display: flex;
+}
+
+#remove-overlay{
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+
+
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#remove-btn:checked ~ #remove-overlay{
+    display: block;
+}
+
+#remove-label{
+    padding: 20px;
+
+    border-radius: 10px;
+    font-size: 24px;
+
+    color: white;
+
+    background-color: #000000;
+}
+
+.on{
+   display: block; 
+}
+.off{
+    display: none;
+}
+
+.box-test{
+    border: 1px solid black;
+    border-radius: 10px;
+
+    height: 600px;
+    width: 90%;
+
+    margin: 70px auto 200px auto;
+}
+
+.finance-body{
+    background-color: white;
+}

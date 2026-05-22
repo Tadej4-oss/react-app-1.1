@@ -1,0 +1,41 @@
+.repos-header{
+    background-color: gray;
+    font-size: 40px;
+    font-weight: 600;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    margin: 55px 10px 10px 10px;
+    padding: 10px;
+}
+
+.repo-box{
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 90%;
+
+
+    background-color: gray;
+    margin: 5px 20px;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+}
+
+.back-arrow{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+
+    z-index: 10;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(27, 27, 27, 0.61), rgb(63, 63, 63));
+    height: 100vh;
+}

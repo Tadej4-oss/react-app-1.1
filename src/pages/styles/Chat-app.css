@@ -1,0 +1,196 @@
+.chat-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(155, 155, 155);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.message-input{
+    display: flex;
+    justify-content: center;
+
+    margin: 20px;
+}
+
+.msg-input{
+    height: 40px;
+    width: 60%;
+
+    border-radius: 10px;
+    border: 1px solid black;
+
+    margin: 0 3px 0 0;
+    font-size: medium;
+}
+
+.send-btn{
+    display: none;
+    width: 15%;
+    border-radius: 10px;
+
+    border: 1px solid black;
+    margin: 0 3px;
+
+    font-size: medium;
+
+    background-color: black;
+    color: white;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.right{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    padding: 10px;
+
+}
+
+.chat-avatar-left{
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-avatar-right{
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.chat{
+    overflow-y: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    margin: 10px;
+    min-height: 55vh;
+    max-height: 55vh;
+
+    background: rgba(20, 20, 20, 0.35);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.logout-btn{
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+
+    height: 60px;
+    width: 100%;
+    color: white;
+    background-color: black;
+
+    font-size: 30px;
+}
+
+.head-avatar{
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.send-label{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.msg-left{
+    border: 1px solid black;;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.msg-right{
+    border: 1px solid black;;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#logout-overlay:checked ~ #logout-label{
+    display: flex;
+}
+
+#logout-overlay:checked ~ .logout-div{
+    display: flex;
+}
+
+#logout-label{
+    display: none;
+    position: fixed;
+
+    z-index: 9;
+
+    height: 100%;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.logout-btn-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    left: 10px;
+    top: 10px;
+
+    height: 50px;
+    width: 50px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    color: white;
+    background-color: black;
+}
+
+.logout-div{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    left: 50%;
+    top: 0;
+    z-index: 10;
+    transform: translate(-50%, 50%);
+
+
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+
+    background-color: gray;
+
+    height:300px;
+    width: 70%;
+}

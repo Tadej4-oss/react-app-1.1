@@ -1,0 +1,257 @@
+.dates-row{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+
+    margin: 20px;
+    padding: 5px;
+}
+
+#today-box{
+    background-color: rgb(119, 119, 119);
+}
+
+.date-box-habit{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+
+    min-width: 60px;
+    max-width: 60px;
+
+    margin: 0 5px;
+}
+
+.today-scroll{
+    height: 40px;
+    width: 30%;
+
+    border: none;
+    border-radius: 20px;
+
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.603);
+}
+
+.today-btn-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+}
+
+.habbits-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 20px;
+
+    padding: 10px;
+    margin: 5px 20px 20px 20px;
+
+    box-shadow: 5px 5px 15px 0;
+}
+
+.habit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: 1px solid black;
+    border-radius: 50px;
+
+    height: 60px;
+    margin: 5px;
+
+    width: 90%;
+}
+
+.habit-done{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: 1px solid black;
+    border-radius: 50px;
+
+    height: 60px;
+    margin: 5px;
+
+    width: 90%;
+
+    background-image: linear-gradient(rgba(0, 255, 0, 0.616), rgba(0, 128, 0, 0.623));
+}
+
+.on{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+
+    min-width: 60px;
+    max-width: 60px;
+
+    margin: 0 5px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.habit-center{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+    
+}
+
+.habit-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(204, 204, 204);
+    margin: 5px;
+
+    border-radius: 50px;
+    width: 50px;
+}
+
+.habit-streaks{
+    border: 1px solid black;
+    border-radius: 10px;
+    min-height: 300px;
+    width: 80%;
+
+    margin: auto;
+    margin-bottom: 200px;
+
+    box-shadow: 5px 5px 15px 0;
+}
+
+.habit-left{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.streak-picker{
+    display: flex;
+    justify-content: space-between;
+
+    margin: auto;
+
+    width: 95%;
+}
+
+.streak-label-on{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 90px;
+    height: 50px;
+
+    background-image: linear-gradient(rgb(61, 61, 61), black);
+    color: white;
+}
+
+.streak-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 90px;
+    height: 50px;
+
+    background-image: linear-gradient(rgb(194, 194, 194), rgb(85, 85, 85));
+}
+
+.dieta-streak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.fire-icon{
+    height: 50px;
+    width: 100px;
+}
+
+.streak-stats{
+    padding: 20px;
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.calandar{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    max-width: 90%;
+    height: 100px;
+
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    background-color: rgb(141, 141, 141);
+}
+
+.includes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: green;
+
+    height: 30px;
+    width: 30px;
+
+    background-color: green;
+
+    border: .5px solid rgba(255, 255, 255, 0.527);
+    border-radius: 50%;
+}
+
+.no-includes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+    width: 30px;
+
+    background-color: rgb(255, 0, 0);
+
+    border: .5px solid rgba(255, 255, 255, 0.507);
+    border-radius: 50%;
+}
+
+.calandar-streak{
+    display: flex;
+    flex-direction: column;
+}
+
+.calandar-streak-day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+}

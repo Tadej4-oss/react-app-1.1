@@ -3,15 +3,20 @@
     flex-direction: row;
     overflow-x: scroll;
 
-    margin: 20px;
+    margin: 20px 0;
     padding: 5px;
 }
 
 #today-box{
-    background-color: rgb(119, 119, 119);
+    color: white;
+    background-image: linear-gradient(gray, black);
 }
 
 .date-box-habit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 10px;
     border: 1px solid black;
     border-radius: 50%;
@@ -20,6 +25,8 @@
     max-width: 60px;
 
     margin: 0 5px;
+
+    background-image: linear-gradient(rgb(177, 177, 177),rgb(128, 127, 127), rgb(110, 110, 110), rgb(88, 88, 88));
 }
 
 .today-scroll{
@@ -83,10 +90,13 @@
 
     width: 90%;
 
-    background-image: linear-gradient(rgba(0, 255, 0, 0.616), rgba(0, 128, 0, 0.623));
+    background-image: linear-gradient(rgba(0, 255, 0, 0.53), rgba(0, 128, 0, 0.33));
 }
 
 .on{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     border: 1px solid black;
     border-radius: 50%;
@@ -129,6 +139,7 @@
 
     margin: auto;
     margin-bottom: 200px;
+    padding: 20px;
 
     box-shadow: 5px 5px 15px 0;
 }
@@ -184,7 +195,9 @@
 
 .fire-icon{
     height: 50px;
-    width: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    margin: auto;
 }
 
 .streak-stats{
@@ -243,15 +256,98 @@
     border-radius: 50%;
 }
 
-.calandar-streak{
-    display: flex;
-    flex-direction: column;
-}
-
 .calandar-streak-day{
     display: flex;
     justify-content: center;
     align-items: center;
 
     margin-bottom: 10px;
+    font-weight: 100;
+
+    max-width: 50px;
+}
+
+.main-day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+    font-weight: 600;
+
+    max-width: 50px;
+    
+    
+}
+
+.habit-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(155, 155, 155);
+    padding: 10px;
+}
+
+.carousel{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    width: 100%;
+}
+
+.carousel #snap-div{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.streak-top{
+    display: flex;
+}
+
+.streak-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.streak-week{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    max-width: 90%;
+    height: 100px;
+    padding: 15px;
+
+    margin: auto;
+
+    border-radius: 10px;
+    background-color: rgb(141, 141, 141);
+}
+
+.calandar-streak{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    max-width: 35px;
+}
+
+#snap-div{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 50px;
+    
+}
+
+#snap-div h1{
+    text-align: center;
+    padding: 20px;
 }

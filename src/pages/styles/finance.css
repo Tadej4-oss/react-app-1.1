@@ -40,6 +40,7 @@
     width: 60%;
     padding: 10px;
     color: black;
+    background-image: linear-gradient(white, rgb(180, 180, 180));
 }
 
 .list{
@@ -58,6 +59,8 @@
 
     box-shadow: 4px 4px 10px 5px gray;
     overflow: scroll;
+
+    background-image: linear-gradient(white,white,white);
 }
 
 .add-menu{
@@ -263,6 +266,3 @@
     margin: 70px auto 200px auto;
 }
 
-.finance-body{
-    background-color: white;
-}

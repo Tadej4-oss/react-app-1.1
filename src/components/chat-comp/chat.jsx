@@ -13,56 +13,126 @@ function Chat( {setLoggedIn, username}){
     const [messages, setMessages] = useState([])
 
     const bottomDiv = useRef(null)
-    const messageRef = collection(db, "massages")
-    //console.log(auth)
     
-    useEffect(() => {
-        const queryMessages = query(messageRef, orderBy("createdAt"));
-        onSnapshot(queryMessages, (snapshot) => {
-            let chat = [];
-            snapshot.forEach((item) => {
-                chat.push({ id: item.id, ...item.data()});
-            })
-            setMessages(chat)
-        })
-    }, [])
+    
 
-    useEffect(() => {
-        if(bottomDiv.current){
-            bottomDiv.current.scrollIntoView({behavior: "smooth"})
-        }
-    }, [messages])
 
-    async function handleSubmit(e){
-        e.preventDefault()
-        if(newMessage !== ""){
-            try{
-                await addDoc(messageRef, {
-                    text: newMessage,
-                    createdAt: serverTimestamp(),
-                    user: auth.currentUser.displayName,
-                    photo: auth.currentUser.photoURL,
-                    userid: auth.currentUser.uid
-                })
-            }
-            catch(err){
-                console.log(err)
-            }
-            finally{
-                setNewMessage("")
-            }
-        }
-        else return;
 
-        
+// Reference to the "massages" collection in Firestore
+const messageRef = collection(db, "massages");
+
+
+// Runs once when the component mounts
+useEffect(() => {
+
+    const queryMessages = query(messageRef, orderBy("createdAt")); // Create a query that gets messages ordered by creation time
+    onSnapshot(queryMessages, (snapshot) => { // Listen for real-time updates from Firestore
+
+        let chat = []; // Temporary array to store all messages
+
+        snapshot.forEach((item) => { // Loop through every document in the snapshot
+            // Add the document id and data to the array
+            chat.push({
+                id: item.id,
+                ...item.data()
+            });
+        });
+
+        // Update React state with the latest messages
+        setMessages(chat);
+    });
+
+}, []); // Empty dependency array = run only once
+
+
+// Runs every time the messages state changes
+useEffect(() => {
+
+    // Make sure the bottom div exists
+    if (bottomDiv.current) {
+
+        // Automatically scroll to the bottom of the chat
+        bottomDiv.current.scrollIntoView({
+            behavior: "smooth"
+        });
     }
 
-    async function handleLogout() {
-        await signOut( auth )
-        cookie.remove("uid-cooke")
-        setLoggedIn(false)
-        
+}, [messages]); // Trigger whenever messages update
+
+
+// Handles sending a new chat message
+async function handleSubmit(e) {
+
+    // Prevent page refresh when form is submitted
+    e.preventDefault();
+
+    // Only send if the input isn't empty
+    if (newMessage !== "") {
+
+        try {
+
+            // Add a new document to Firestore
+            await addDoc(messageRef, {
+                text: newMessage, // Message text
+                createdAt: serverTimestamp(), // Server-generated timestamp
+                user: auth.currentUser.displayName, // User's display name
+                photo: auth.currentUser.photoURL, // User's profile picture
+                userid: auth.currentUser.uid // User's unique ID
+            });
+
+        } catch (err) {
+
+            // Log any errors that occur
+            console.log(err);
+
+        } finally {
+
+            // Clear the input field whether successful or not
+            setNewMessage("");
+        }
+
+    } else {
+
+        // Do nothing if message is empty
+        return;
     }
+}
+
+
+// Handles user logout
+async function handleLogout() {
+
+    // Sign the user out of Firebase Authentication
+    await signOut(auth);
+
+    // Remove stored cookie containing user ID
+    cookie.remove("uid-cooke");
+
+    // Update application state to show user is logged out
+    setLoggedIn(false);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return(
         <>

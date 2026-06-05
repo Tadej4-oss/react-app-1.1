@@ -1,0 +1,148 @@
+.habit-add {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;              
+    max-width: 100%;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+
+    background-image: linear-gradient(rgb(126, 126, 126), rgb(90, 90, 90), rgb(65, 64, 64), rgb(32, 32, 32));
+    color: white;
+
+    padding: 24px;
+    gap: 16px;
+
+
+    transition: right 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* open state */
+#habit-side-menu:checked ~ .habit-add {
+    right: 0;
+}
+
+/* back/close button area */
+.habit-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: fit-content;
+    padding: 10px;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.08);
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.habit-overlay:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateX(-2px);
+}
+
+.habit-overlay svg {
+    fill: white;
+}
+
+/* title */
+.habit-add h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* input FIX (your 100px was breaking UI) */
+.habit-input {
+    width: 100%;
+    padding: 14px 14px;
+
+    border-radius: 12px;
+    border: none;
+    outline: none;
+
+    background: rgba(255,255,255,0.08);
+    color: white;
+
+    font-size: 14px;
+}
+
+.habit-input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* section label */
+.habit-add h2 {
+    font-size: 13px;
+    opacity: 0.7;
+    font-weight: 500;
+    margin: 10px 0 0;
+}
+
+/* button */
+.habit-add button {
+    margin-top: auto; /* pushes button to bottom */
+    padding: 14px;
+
+    border-radius: 14px;
+    border: none;
+
+    background: linear-gradient(135deg, #141535, #2f1175);
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.habit-add button:hover {
+    transform: scale(1.02);
+    opacity: 0.95;
+}
+
+.habit-rmv-menu{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+
+    height: 100%;
+    width: 100%;
+
+    background-image: linear-gradient(rgb(126, 126, 126), rgb(90, 90, 90), rgb(65, 64, 64), rgb(32, 32, 32));
+
+    transition: .7s;
+}
+
+#habit-remove:checked ~ .habit-rmv-menu{
+    right: 0;
+}
+
+
+.habit-rmv-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    margin: 20px 10px;
+    padding: 16px 100px;
+
+    background: linear-gradient(135deg, rgb(78, 78, 78), rgb(54, 54, 54));
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.2s ease;
+}

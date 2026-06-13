@@ -5,7 +5,9 @@ import Finance from "./pages/finance";
 import Habbit_tracker from "./pages/Habbit_tracker";
 import Gym from "./pages/Gym";
 import Navbar from "./components/navbar";
+import Home from "./components/gym-comp/Home.jsx";
 import './App.css';
+import { Routes, Route } from "react-router-dom";
 
 function App(){
     const [page, setPage] = useState(2)
@@ -20,6 +22,7 @@ function App(){
         <Navbar setpage = {setPage}/>
         </>
     )
+    
 }
 
     

@@ -1,0 +1,81 @@
+#w-day{
+    text-align: center;
+    font-size: 40px;
+    margin: 10px auto
+}   
+
+#training-day{
+    text-align: center;
+    font-size: 30px;
+    margin: 5px auto 20px auto;
+}
+
+.exercise-list{
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    padding: 10px;
+    margin: auto;
+
+    width: 90%;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 10, 0.815);
+}
+
+.indiv-ex{
+    display: grid;
+    grid-template-columns: 1fr 60px 80px;
+    align-items: center;
+
+    gap: 15px;
+    padding: 10px 15px;
+
+    border-radius: 8px;
+    margin-bottom: 8px;
+
+    background: #1d1f24;
+    border: 1px solid #9c6b18;
+
+    color: rgb(199, 199, 199)
+}
+
+.indiv-ex p {
+    margin: 0;
+    font-size: 18px;
+
+}
+
+.indiv-ex img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    justify-self: center;
+}
+
+.indiv-ex button {
+    justify-self: end;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.btn-divs{
+    width: 90%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px auto;
+    padding: 10px;
+
+    font-size: 30px;
+}
+
+.btn-divs label{
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 20px;
+}

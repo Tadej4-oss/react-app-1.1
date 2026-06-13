@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { addDays, subDays, format, differenceInDays } from "date-fns"
+import { addDays, subDays, format, differenceInDays, fromUnixTime } from "date-fns"
 
 import { GiWeightLiftingUp } from "react-icons/gi";
 import { LuGlassWater } from "react-icons/lu";
@@ -11,20 +11,21 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import "./styles/Habbit_tracker.css"
 import "./styles/habbit-sidemenu.css"
+import { Route, Routes } from "react-router-dom";
 
 function Habbit_tracker(){
-    const [subWeek, setSubWeek] = useState([])
-    const day = subDays(new Date(), 6)
-    const [habitAdd, setHabitAdd] = useState("") 
-    const [page, setPage] = useState(0)
-    const [date, setDate] = useState(subDays(new Date(), 21))
-    const [days, setDays] = useState([])
-    const [currentday, setCurrentday] = useState(format(date, "P"))
+    const [subWeek, setSubWeek] = useState([]) // za statsa k ti sprinta zadnjih 7 dni
+    const day = subDays(new Date(), 6) // dobit dan za 7 dni nazaj in loopad do current day da dobis [week]
+
+    const [habitAdd, setHabitAdd] = useState("") // onchange input handler
+    const [date, setDate] = useState(subDays(new Date(), 21)) // ista logika k gor, get date 21 dni nazaj in loopi za ceu mesc k so  pol [days]
+    const [days, setDays] = useState([]) // array of 41 days like objects  
+    const [currentday, setCurrentday] = useState(format(date, "P")) // currentday za hendlat koledar
     const [habbit, setHabbit] = useState(() => {
         const data = localStorage.getItem("habits")
         return data ? JSON.parse(data) : []
-    })
-
+    }) // habits 
+ 
     const today = useRef(null)
     const iconMap = {
         weights: GiWeightLiftingUp,
@@ -304,7 +305,6 @@ function Habbit_tracker(){
                 )
             })}
         </div>
-    
         </>
     )
 }

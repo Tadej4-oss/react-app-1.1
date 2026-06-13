@@ -1,0 +1,77 @@
+.login-box{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 100px auto;
+    width: 90%;
+}
+
+.login-div{
+    margin: 10px 10px 0 10px;
+    padding: 10px;
+}
+
+.login-input{
+    border: none;
+    border-radius: 5px;
+
+
+    width: 100%;
+    height: 30px;
+}
+
+.email-div{
+    width: 90%;
+    margin: auto auto 15px auto;
+}
+
+.psw-div{
+    width: 90%;
+    margin: auto;
+}
+
+.gym-login{
+    display: block;
+
+    font-size: 20px;
+    
+    border: none;
+    border-radius: 10px;
+    
+    width: 90%;
+    
+    padding: 10px;
+    margin: 20px auto 10px auto;
+
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(82, 82, 82));
+}
+
+.or-div{
+    width: 80%;
+    margin: auto auto 20px auto;
+    justify-content: space-between;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.alt-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    margin: 10px auto;
+
+
+    height: 50px;
+    font-size: large;
+
+    border-radius: 20px;
+    padding: 10px;
+    
+
+    background-image: linear-gradient(to bottom right, white, gray);
+}

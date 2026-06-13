@@ -1,0 +1,59 @@
+#change-workout:checked ~ .change-w-div{
+    right: 0;
+}
+
+.change-w-div{
+    position: fixed;
+    top: 0;
+    right: -100%;
+
+    height: 100%;
+    width: 100%;
+
+    transition: .7s;
+    background-image: linear-gradient(gray, black);
+}
+
+.workout-modify{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+.workout-modify input{
+    text-align: center;
+
+    padding: 5px;
+    margin: 5px 10px;
+
+    height: 60px;
+    width: 75%;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+}
+
+.workout-modify input::placeholder{
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+}
+
+.w-modified{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.w-tick{
+    display: flex;
+    align-items: center;
+}

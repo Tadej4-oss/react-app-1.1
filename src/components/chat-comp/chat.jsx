@@ -114,26 +114,6 @@ async function handleLogout() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return(
         <>
         <input style = {{display: "none"}}id = "logout-overlay" type = "checkbox"/>

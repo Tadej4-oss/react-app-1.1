@@ -1,36 +1,30 @@
 import "./styles/gym.login.css"
-import Cookies from "universal-cookie"
 import { addDays, format, startOfWeek } from "date-fns"
 
 import { 
     createUserWithEmailAndPassword,
     onAuthStateChanged, 
-    signOut,
     signInWithEmailAndPassword
 } from "firebase/auth"
 
 import { 
     auth,
-    provider,
     db
 } from "../../firebase"
 
 import { 
     addDoc,
-    doc, 
-    setDoc, 
-    updateDoc,
     collection
  } from "firebase/firestore"
 
 import { useEffect, useState } from "react"
-import { Navigate, useNavigate } from "react-router-dom"
+
 
 export default function Auth(){
     const [user, setUser] = useState()
     const [email, setEmail] = useState("")
     const [psw, setPsw] = useState("")
-    const [arr, setArr] = useState([])
+
 
     useEffect(() => {
         const response = onAuthStateChanged(auth, (user) => {

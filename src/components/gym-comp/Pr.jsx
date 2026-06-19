@@ -1,7 +1,6 @@
 import { 
     addDoc,
     collection,
-    getDoc,
     getDocs,
     query,
     doc,
@@ -14,7 +13,7 @@ from "firebase/firestore"
 
 import "./styles/prs.css"
 import { db } from "../../firebase"
-import { format, set } from "date-fns"
+import { format } from "date-fns"
 import { useEffect, useState } from "react"
 
 export default function Pr(){

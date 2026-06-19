@@ -1,6 +1,4 @@
 import { 
-    updateDoc,
-    doc,
     Timestamp,
     addDoc,
     collection,

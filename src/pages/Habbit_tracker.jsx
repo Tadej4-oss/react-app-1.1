@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { addDays, subDays, format, differenceInDays, fromUnixTime } from "date-fns"
+import { addDays, subDays, format, differenceInDays } from "date-fns"
 
 import { GiWeightLiftingUp } from "react-icons/gi";
 import { LuGlassWater } from "react-icons/lu";
@@ -11,7 +11,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import "./styles/Habbit_tracker.css"
 import "./styles/habbit-sidemenu.css"
-import { Route, Routes } from "react-router-dom";
+
 
 function Habbit_tracker(){
     const [subWeek, setSubWeek] = useState([]) // za statsa k ti sprinta zadnjih 7 dni

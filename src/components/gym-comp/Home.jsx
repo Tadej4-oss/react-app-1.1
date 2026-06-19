@@ -1,29 +1,24 @@
-import { Navigate, Route, Link, useNavigate, redirect, data } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { signOut } from "firebase/auth";
 
 import "./styles/home.css"
 import "./styles/home-sidemenus.css"
 
 import {
-    Timestamp,
-    getDoc,
     doc, 
     updateDoc,
     collection,
     getDocs,
     orderBy,
-    query,
-    addDoc, 
-    where} 
+    query, } 
 from "firebase/firestore"
 
 import { auth, db } from "../../firebase";
 
 
-import { use, useEffect, useState } from "react";
-import { subDays, format, addDays, startOfWeek, differenceInDays } from "date-fns";
-import Workouts from "./Workouts";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useEffect, useState } from "react";
+import { subDays, format, differenceInDays } from "date-fns";
+
 
 
 export default function Home({workouts, setWorkouts}) {

@@ -12,7 +12,7 @@ import Weight from "../components/gym-comp/weight";
 
 import {  onAuthStateChanged} from "firebase/auth";
 import { auth, db } from "../firebase";
-import { collection, getDocs, orderBy, query, snapshotEqual } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 
 function Gym(){
     const [user, setUser] = useState()

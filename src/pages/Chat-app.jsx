@@ -5,8 +5,7 @@ import Chat from "../components/chat-comp/chat";
 
 import "./styles/Chat-app.css"
 
-import {auth, provider} from "../firebase.js";
-import { signInWithPopup, signOut } from "firebase/auth";
+import {auth} from "../firebase.js";
 import Cookies from "universal-cookie";
 
 function Chat_app(){

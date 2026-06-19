@@ -1,0 +1,147 @@
+.size-stats-box {
+    width: 90%;
+    max-width: 700px;
+    margin: 24px auto;
+    padding: 12px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #d6d6d6;
+    border-radius: 12px;
+
+    gap: 5px;
+
+}
+
+.indiv-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 24px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.03);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.indiv-stat:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.indiv-stat p {
+    margin: 0;
+}
+
+.indiv-stat p:first-child {
+    font-weight: 700;
+    color: #111827;
+}
+
+.indiv-stat p:nth-child(2) {
+    font-weight: 600;
+    color: #374151;
+}
+
+.indiv-stat p:last-child {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+
+
+.size-input {
+    width: 90%;
+    margin: 24px auto;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.size-input select,
+.size-input input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    background: #f9fafb;
+    color: #111827;
+
+    font-size: 16px; /* prevents iOS zoom */
+}
+
+.size-input select:focus,
+.size-input input:focus {
+    outline: none;
+    border-color: #6b7280;
+
+    box-shadow: 0 0 0 4px rgba(107, 114, 128, 0.15);
+}
+
+.size-input button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #4b5563;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.size-input button:hover {
+    background: #374151;
+}
+
+
+
+
+
+.size-details{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.size-details.open{
+    max-height: 300px;
+}
+
+.extra-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 40px;
+
+}
+

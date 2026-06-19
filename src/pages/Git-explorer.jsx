@@ -74,7 +74,13 @@ function Git(){
         setUserid(id)
     }
 
-
+    if(!users){
+        return(
+            <>
+            <h1>error alpa loading</h1>
+            </>
+        )
+    }
     return(
         <>
         {!on && <>

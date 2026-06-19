@@ -6,10 +6,12 @@ import { updateDoc, doc, getDoc } from "firebase/firestore"
 import { db } from "../../firebase"
 
 export default function Workout(){
-    const { state } = useLocation()
+    const { state } = useLocation()//look up/learn
+
     const [ex, setEx] = useState([])
     const [handleEx, setHandleEx] = useState("")
     const [searchedEx, setSearchedEx] = useState([])
+    const [selectedImg, setSelectedImg] = useState(null)
     console.log(state)
     
     useEffect(() => {
@@ -49,7 +51,7 @@ export default function Workout(){
     async function getEx() {
         const data = await getDoc(doc(db, "workouts", state.id))
         
-        console.log(data.data().exercises)
+        console.log(data.data())
         setEx(data.data().exercises)
     }
 
@@ -60,8 +62,10 @@ export default function Workout(){
             </>
         )
     }
+    
     return(
         <>
+        
         <input style = {{display: "none"}}type = "checkbox" id = "search-menu" />
         <h1 id = "w-day">{state.day}</h1>
         <hr style = {{width: "90%", margin: "auto"}} />
@@ -78,7 +82,7 @@ export default function Workout(){
                         <>
                         <div className="indiv-ex" key = {i}>
                             <p>{el.name}</p>
-                            <img style = {{width: "50px", height: "50px"}}src = {el.imageUrl} alt = "nopic" />
+                            <img onClick = {() => {setSelectedImg(el.imageUrl)}} style = {{width: "50px", height: "50px"}}src = {el.imageUrl} alt = "nopic" />
                             <button>RMV</button>
                         </div>
                         </>
@@ -99,8 +103,14 @@ export default function Workout(){
         </div>
 
 
+        {/* fullscreen img */}
+        {selectedImg && (
+                    <label className = "img-overlay" onClick={() => {setSelectedImg(null)}}>
+                        <img className = "full-image" src = {selectedImg} alt = "nopic" />
+                    </label>
+        )}
         
-        
+        {/* search ex  sidemenu */}
         <div className="search-ex">
             <input placeholder = "Search Exercise"value={handleEx} onChange={(e) => {setHandleEx(e.target.value)}}/>
             <button onClick={() => {fetchEx()}}>search</button>
@@ -109,7 +119,7 @@ export default function Workout(){
                     return(
                         <>
                         <p>{el.name}</p>
-                        <img style = {{width: "50px", height: "50px"}} src = {el.imageUrl} alt = "nopic" />
+                        <img onClick = {() => {setSelectedImg(el.imageUrl)}} style = {{width: "50px", height: "50px"}} src = {el.imageUrl} alt = "nopic" />
                         <button onClick={() => {handleExercise(el)}}>add ex</button>
                         </>
                     )
@@ -117,6 +127,8 @@ export default function Workout(){
             </div>
         </div>
         <label htmlFor="search-menu" id = "ex-overlay"></label>
+
+
 
         </>
     )

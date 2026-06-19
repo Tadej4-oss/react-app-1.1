@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import Auth from "../components/gym-comp/gym.auth";
 import Home from "../components/gym-comp/Home";
 import Workouts from "../components/gym-comp/Workouts";
+import Pr from "../components/gym-comp/Pr";
+import Size from "../components/gym-comp/size";
+import Weight from "../components/gym-comp/weight";
 
 
 import {  onAuthStateChanged} from "firebase/auth";
@@ -48,14 +51,9 @@ function Gym(){
 
         getWorkouts()
     }, [])
+
     
-    if(workouts.length === 0){
-        return(
-            <>
-            <h1>Loading...</h1>
-            </>
-        )
-    }
+    
 
     return(
         <>
@@ -68,6 +66,9 @@ function Gym(){
                                                     /> : <Navigate to = "/login" />}></Route>
 
             <Route path = "/gym/workout/:id" element ={<Workouts />}></Route>
+            <Route path = "gym/PersonalRecords" element = {<Pr />}></Route>
+            <Route path = "gym/Weight" element = {<Weight />}></Route>
+            <Route path = "gym/Size" element = {<Size />}></Route>
         </Routes>
         </>
     )

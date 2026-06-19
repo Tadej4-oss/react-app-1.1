@@ -64,7 +64,7 @@ export default function Auth(){
                         const day = format(addDays(mon, i), "EEE")
                         await addDoc(collection(db, "workouts"), {
                             id: i,
-                            workout: `workout ${i}`,
+                            workout: `Add Workout`,
                             day: day,
                             createdAt: format(new Date(), "P"),
                             exercises: [
@@ -72,6 +72,23 @@ export default function Auth(){
                             ]
                         })
                     }
+                    
+                    await addDoc(collection(db, "Streaks"),{
+                        streak: 0,
+                        bestStreak: 0,
+                        logs: [
+                            
+                        ],
+                    })
+
+                    await addDoc(collection(db, "WeightStats"),{
+                        
+                    })
+
+                    await addDoc(collection(db, "SizeStats"),{
+                        
+                    })
+                    
                 }
 
                     

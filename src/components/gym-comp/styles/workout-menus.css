@@ -23,7 +23,8 @@
 
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    
+    box-shadow: 0 20px 30px 20px rgb(0, 0, 0);
 
     overflow-y: auto;
 
@@ -70,8 +71,6 @@
     height: 100%;
     width: 100%;
 
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(3px);
 }
 
 .test{
@@ -82,5 +81,30 @@
 
 .test button{
     width: 40%;
+}
+
+
+.full-image{
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    z-index: 1000;
+
+    height: 400px;
+    width: 400px;
+
+    transition: .7s;
+}
+
+.img-overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
 }
 
